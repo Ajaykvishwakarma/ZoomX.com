@@ -1,0 +1,56 @@
+.gift_container{
+    width: 80%;
+    
+    margin:auto;
+    
+    padding: 10px ;
+}
+
+.gift_card {
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: rgb(240, 239, 239);
+}
+.gift_image_div{
+    
+    height: 100%;
+ 
+}
+.gift_text_div {
+    
+    height: 100%;
+ 
+    padding: 10px;
+    text-align: start;
+
+}
+
+.gift_text{
+    padding: 20px;
+    
+}
+.gift_text > div:nth-child(2) > p{
+
+    font-size: 15px;
+    line-height: 25px;
+} 
+
+
+.gift_image{
+    width: 90% !important;
+    height: 350px !important;
+    margin: auto;
+    padding: 10px;
+    align-items: center;
+}
+
+
+
+@media (max-width: 520px) {
+    .gift_card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}  

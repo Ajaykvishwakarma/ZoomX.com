@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+} */
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.list{
+	list-style: none;
+}
+.footer{
+	background-color: #000000c0;
+    padding: 70px 0;
+    padding-bottom: 0px !important;
+    
+}
+.footer_col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer_col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer_col h4::before{
+	content: '';
+	position: absolute;
+	left:10;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 100px;
+}
+.footer_col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer_col ul li .links{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer_col ul li .links:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer_col .social_links .links{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer_col .social_links .links:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+.footer2 {
+ 
+    width: 100%;
+    height: 60px;
+}
+.footer2 > div:nth-child(1) {
+    width: 100%;
+    background: gray;
+    height: 2px;
+
+}
+.footer2 > div:nth-child(2) { 
+    display: flex;
+    color: #bbbbbb;
+    justify-content: space-between;
+
+}
+
+.footer2 > div:nth-child(2) > div{ 
+
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.footer2 > div:nth-child(2) > div:nth-child(2) > span{ 
+   
+    margin-right: 20px;
+}
+
+.social_media_icon{
+	margin-top: 9px;
+	
+}
+
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer_col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer_col{
+    width: 100%;
+}
+}
+
+
+
+
+
+
