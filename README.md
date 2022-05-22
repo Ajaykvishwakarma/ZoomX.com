@@ -26,7 +26,7 @@ These are the components outlined in ZoomX site. All ZoomX components support th
 
 ### Image
 
-![alt text](https://www.levi.in/on/demandware.static/-/Sites-LeviIN-Library/en_IN/dw96cbad45/images/homepage/logo.jpg)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/logo.png)
 
 ---
 ### Landing page
@@ -38,7 +38,7 @@ These are the components outlined in ZoomX site. All ZoomX components support th
 | Middle | Slider, Images |
 | Description | Read More |
 
-![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/levi-s.in/main/landing.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/landing_page.png)
 ---
 ### Products page
 
@@ -48,7 +48,7 @@ These are the components outlined in ZoomX site. All ZoomX components support th
 | Add to Cart | Add Any Product to Cart |
 | Color | Red, Blue, Green etc. |
 
-![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/levi-s.in/main/products.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/productpage.png)
 ---
 ### Cart page
 
@@ -57,7 +57,7 @@ These are the components outlined in ZoomX site. All ZoomX components support th
 | View Cart | Check Your cart |
 | Checkout From Cart | Buy Selected Items |
 
-![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/levi-s.in/main/cart.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cart.png)
 ---
 
 ### login & Register page
@@ -67,7 +67,8 @@ These are the components outlined in ZoomX site. All ZoomX components support th
 | Register | Ask for user details |
 | Login | Use user Details to login thier account  |
 
-![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/levi-s.in/main/login.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/login.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/register.png)
 ---
 
 ### Checkout page
@@ -76,34 +77,34 @@ These are the components outlined in ZoomX site. All ZoomX components support th
 | ------------- | -------------- |
 | Add Details | Ask for Extra Details to Proceed |
 
-![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/levi-s.in/main/checkout.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/payment1.png)
+
 ---
 
 ### Payment page
  
 | Syntax | Description |
 | ------------- | -------------- |
-| Payment Methods | Pay Any type of Cards |
+| Payment Methods | Paymant Details |
 
-![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/levi-s.in/main/payment.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/payment2.png)
 ---
 
-### Store locator page
+### Categories Page
+
 | Syntax | Description |
 | ------------- | -------------- |
-| Maps | Find all ciies where levi's located |
- 
- ![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/levi-s.in/main/store.png)
+| All categories | Check Your categories |
+
+
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cat_1_photobook.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cat_2_stationary.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cat_3_calenders.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cat_4_cardstock.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cat_5_display.png)
 ---
 
-### Help page
-| Syntax | Description |
-| ------------- | -------------- |
-| Helps | All types of help provided by levi |
-
-![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/levi-s.in/main/help.png)
----
 
 ### Over_All 
 
-That was so funny! :joy:
+That was so Interesting for me! :joy:
