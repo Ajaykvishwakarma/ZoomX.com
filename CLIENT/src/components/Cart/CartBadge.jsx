@@ -3,8 +3,9 @@ import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { useState, useEffect} from "react";
-const axios = require("axios");
+
+import { useSelector } from "react-redux";
+
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -16,28 +17,17 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export const Badges = () => {
-  const [count , setCount] = useState(1)
-  const [data1, setData1] = useState([])
-   const BaseUrl = 'https://zoomxx.herokuapp.com';
- const getCount = () => {
-     axios.get(`${BaseUrl}/carts`).then(res => {
-      setData1(res.data)
-    })
-  }
 
- 
-  useEffect(() => {
-    getCount()
 
-   
-  },[])
-  useEffect(() => {
-    setCount(data1.cart)
-  },[])
-  // console.log(count)
+  
+  const { cart } = useSelector(store => store.cart)
+  
+
+
+
   return (
     <IconButton aria-label="cart">
-      <StyledBadge badgeContent={count} color="secondary">
+      <StyledBadge badgeContent={cart.length} color="secondary">
         <ShoppingCartIcon />
       </StyledBadge>
     </IconButton>

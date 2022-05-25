@@ -23,19 +23,24 @@ export default function AddressForm() {
 
   // console.log(name, cardnumber, expiry, cvv)
   const handleSubmit = () =>  {
-    axios.post(`${BaseUrl}`,{
-      firstName : firstname,
-      lastName : lastname,
-      address1:address1,
-      address2: address2,
-      city: city,
-      state : state,
-      postalCode :postal ,
-      country : country,
-    }).then((res) => {
-      console.log(res)
-      alert("Recorded SuccessFull!")
-    })
+    if(firstname.length !== 0 && lastname.length !== 0 && address1.length !== 0 && city.length !== 0) {
+      axios.post(`${BaseUrl}`,{
+        firstName : firstname,
+        lastName : lastname,
+        address1:address1,
+        address2: address2,
+        city: city,
+        state : state,
+        postalCode :postal ,
+        country : country,
+      }).then((res) => {
+        // console.log(res)
+        alert("Recorded SuccessFull!")
+      })
+    }else{
+      alert("Please fill all Field!")
+    }
+    
   }
 
   return (

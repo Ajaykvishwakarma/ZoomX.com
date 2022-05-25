@@ -17,15 +17,20 @@ export default function PaymentForm () {
 
   // console.log(name, cardnumber, expiry, cvv)
   const handleSubmit = () =>  {
-    axios.post(`${BaseUrl}`,{
-      name: name,
-      cardNo : cardnumber,
-      exDate:expiry,
-      cvv: cvv
-    }).then((res) => {
-      console.log(res)
-      alert("payment SuccessFull!")
-    })
+    if(name.length !== 0 && expiry.length !== 0){
+      axios.post(`${BaseUrl}`,{
+        name: name,
+        cardNo : cardnumber,
+        exDate:expiry,
+        cvv: cvv
+      }).then((res) => {
+        console.log(res)
+        alert("payment SuccessFull!")
+      })
+    }else{
+      alert("Please Fill all field!")
+    }
+   
   }
 
 //   axios.post("https://reqres.in/api/login", {

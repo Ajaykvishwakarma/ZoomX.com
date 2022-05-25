@@ -57,12 +57,14 @@ export const  Login = () => {
       if(response.status === 'failed') 
           return AnalyserNode('Wrong Credentils')
       localStorage.setItem('token', JSON.stringify(response.token))
+      localStorage.setItem('userName', JSON.stringify(user.email))
       dispatch(setAuth(true))
       navigate('/')
     }
   }
      function logout(){
         localStorage.removeItem('token')
+        localStorage.removeItem('userName')
         dispatch(setAuth(false))
         alert("Signing out Successfully!")
         navigate('/signup')

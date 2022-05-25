@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# ZoomX World!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Thanks for visiting [ZoomX.com site](https://zoomx-a15v.vercel.app)!
 
-## Available Scripts
+### This E-commerce site provide us to buy all ZoomX product 
 
-In the project directory, you can run:
+### Basic Components
 
-### `npm start`
+These are the components outlined in ZoomX site. All ZoomX components support these.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Components
+- Landing page
+- Products page
+- Cart page
+- login & Register page
+- Checkout page 
+- Payment page
+- categories pages
 
-### `npm test`
+---
+### Link
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[ZoomX.com Official](https://zoomx-a15v.vercel.app/)
 
-### `npm run build`
+### Image
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/logo.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
+### Landing page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Drop Down Header |
+| Footer | Static Footer |
+| Middle | Slider, Images |
+| Description | Read More |
 
-### `npm run eject`
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/landing_page.png)
+---
+### Products page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Syntax | Description |
+| ------------- | -------------- |
+| All Products | Products By All Categories |
+| Add to Cart | Add Any Product to Cart |
+| Color | Red, Blue, Green etc. |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/productpage.png)
+---
+### Cart page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Syntax | Description |
+| ------------- | -------------- |
+| View Cart | Check Your cart |
+| Checkout From Cart | Buy Selected Items |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cart.png)
+---
 
-## Learn More
+### login & Register page
+ 
+| Syntax | Description |
+| ------------- | -------------- |
+| Register | Ask for user details |
+| Login | Use user Details to login thier account  |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/login.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/register.png)
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Checkout page
 
-### Code Splitting
+| Syntax | Description |
+| ------------- | -------------- |
+| Add Details | Ask for Extra Details to Proceed |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/payment1.png)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Payment page
+ 
+| Syntax | Description |
+| ------------- | -------------- |
+| Payment Methods | Paymant Details |
 
-### Making a Progressive Web App
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/payment2.png)
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Categories Page
 
-### Advanced Configuration
+| Syntax | Description |
+| ------------- | -------------- |
+| All categories | Check Your categories |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cat_1_photobook.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cat_2_stationary.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cat_3_calenders.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cat_4_cardstock.png)
+![alt text](https://raw.githubusercontent.com/Ajaykvishwakarma/Images/main/zoomx_img/cat_5_display.png)
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+### Over_All 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+That was so Interesting for me! :joy:

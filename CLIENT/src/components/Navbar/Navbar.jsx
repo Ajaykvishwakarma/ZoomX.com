@@ -78,6 +78,9 @@ const AllProduct = () => (
 
 export const Navbar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(true);
+  let user =  JSON.parse(localStorage.getItem('userName'))  || "";
+  let username = user.split("@")
+  
   return (
     <>
       <nav className="main-nav">
@@ -119,6 +122,9 @@ export const Navbar = () => {
             </li>
              <li>
               <NavLink to="/cart"> <Badges /> </NavLink>
+            </li>
+            <li>
+               {username[0]}
             </li>
           </ul>
         </div>

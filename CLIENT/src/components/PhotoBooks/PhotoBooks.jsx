@@ -35,7 +35,7 @@ export const PhotoBooks = () => {
 
     // const [ data, setData ] = useState([])
     const dispatch = useDispatch()
-    const { fetchdataObj, loading  } = useSelector((store) => store)
+    const { fetchdataObj, loading  } = useSelector((store) => store.shippingData)
     const BaseUrl = `https://zoomxx.herokuapp.com`
 
     useEffect(() => {
@@ -103,7 +103,7 @@ export const PhotoBooks = () => {
                 <div className={style.products}>
                     {fetchdataObj?.photobooks?.map((el, index) => {
 
-                        return( <Link to={`/product/${el._id}`} key={el._id}> 
+                        return( <Link to={`/product/${el._id}`} > 
                     <div className={style.product_item_container} key={el._id} onClick = {() => handleChange1(contextUrl)}>
                         <div className={style.product_image}>
                             <img src={el.image} alt='' />

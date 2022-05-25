@@ -19,7 +19,7 @@ export const Seller = () => {
     // const [ data, setData ] = useState([])
     const [currPage, setCurrPage] = useState(1)
     const dispatch = useDispatch()
-    const { fetchdataObj, loading  } = useSelector((store) => store)
+    const { fetchdataObj, loading  } = useSelector((store) => store.shippingData)
     const BaseUrl = `https://zoomxx.herokuapp.com`
 
     useEffect(() => {

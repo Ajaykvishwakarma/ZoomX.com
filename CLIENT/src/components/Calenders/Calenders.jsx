@@ -37,7 +37,7 @@ export const Calenders = () => {
 
     // const [ data, setData ] = useState([])
     const dispatch = useDispatch()
-    const { fetchdataObj, loading  } = useSelector((store) => store)
+    const { fetchdataObj, loading  } = useSelector((store) => store.shippingData)
     const BaseUrl = `https://zoomxx.herokuapp.com`
 
     useEffect(() => {

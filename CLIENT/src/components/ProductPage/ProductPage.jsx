@@ -24,17 +24,20 @@ export const ProductPage = () => {
     const dispatch= useDispatch();
     const navigate = useNavigate();
     // const BaseUrl = 'https://zoomxx.herokuapp.com';
-    const { perticulardata } = useSelector(store => store)
+    const { perticulardata } = useSelector(store => store.shippingData)
     useEffect(()=>{
         // let url = `${BaseUrl}/photobook/${id}`
         let url = `${contextUrl}/${id}`
+        // console.log(url)
         dispatch(fetchPerticularData(url))
     },[])
+    // console.log(perticulardata)
 
  
 
-   
+   const cartArray = JSON.parse(localStorage.getItem('cartData')) || [];
     const handleCart = () => {
+        const count = 1;
      
 
         if(size1.length === 0) {
@@ -46,11 +49,18 @@ export const ProductPage = () => {
                 }
                 });
             
+
             // console.log(perticulardata)
-            dispatch(addCartData({...perticulardata[0]}))
+            cartArray.push({...perticulardata[0], count: 1})
+            localStorage.setItem('cartData', JSON.stringify(cartArray))
+            alert("Product added successfully!")
+            // dispatch(addCartData({...perticulardata[0]}))
         }
 
 
+    }
+    const handleRoute =() => {
+        navigate('/cart')
     }
 
  
@@ -79,8 +89,8 @@ export const ProductPage = () => {
                                 </div>
                                 <div>
                                 {size1 ? "" : <div>
-                                <Button variant="outlined" onClick = {() => { setSize1("F"); alert("Size selected successfully")}}>{el.size[0] ? (el.size)[0][0]: "F"}</Button>&emsp;&emsp;
-                                <Button variant="outlined" onClick = {() => { setSize1("S"); alert("Size selected successfully")}} >{el.size[0] ? (el.size)[1][0] : "S"}</Button>
+                                <Button variant="outlined" onClick = {() => { setSize1("F"); alert("Size selected successfully")}}>F</Button>&emsp;&emsp;
+                                <Button variant="outlined" onClick = {() => { setSize1("S"); alert("Size selected successfully")}} >S</Button>
                                 </div>
                                 }    
                                 
@@ -92,6 +102,7 @@ export const ProductPage = () => {
                                 </div>
                                 <div>
                                    <Button variant="contained" onClick={handleCart}>Add To Cart</Button>
+                                  <Button variant="contained" onClick={handleRoute}  style={{marginTop:"20px", background:"maroon"}}>Go o cart</Button>
                                 </div>
                                 
                             </div>
@@ -101,7 +112,7 @@ export const ProductPage = () => {
                            
                     )
                 })}
-                
+                 
                                
                 
                

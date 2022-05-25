@@ -17,10 +17,10 @@ import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Footer } from '../Footer/Footer';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData,deleteCartdata } from '../../Redux/action';
+import {fetchCartData, setDeleteCart, setUpdateCart} from '../../Redux/Cart/action';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
-
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -42,43 +42,43 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
       border: 0,
     },
   }));
+
   
+
+
   
-export const Cart = () => {
-    const [count, setCount] = React.useState(1);
-    const [invisible, setInvisible] = React.useState(false);
+export function Cart () {
+
     const navigate = useNavigate();
      const tokenStr = localStorage.getItem('token')
     const token = tokenStr ? JSON.parse(tokenStr) : navigate('/signin')
     
-  
-    const handleBadgeVisibility = () => {
-      setInvisible(!invisible);
-    };
-
-    const dispatch= useDispatch();
-
-    const BaseUrl = 'https://zoomxx.herokuapp.com';
-    const { fetchdataObj } = useSelector((store) => store)
-    useEffect(()=>{
-        let url = `${BaseUrl}/carts`
-        dispatch(fetchData(url))
-    },[])
-  
-
-    let sum = 0;
-
-    function handledelete(id){
-        console.log(id)
-        let url = `${BaseUrl}/cart/${id}`
-        dispatch(deleteCartdata(url))
-
-    }
-
-
     
    
+  
+    const dispatch= useDispatch();
+    const { cart } = useSelector(store => store.cart)
 
+
+    // const BaseUrl = 'https://zoomxx.herokuapp.com';
+    // const { fetchdataObj } = useSelector((store) => store)
+    useEffect(()=>{
+        let cartData =  JSON.parse(localStorage.getItem('cartData'))  || []
+        
+        dispatch(fetchCartData(cartData))
+    },[])
+
+  
+  function getTotal() {
+    let temp = cart.map(function(item) {
+        return parseInt(item.discount * item.count)
+    })
+    let sum = temp.reduce(function(prev, next) {
+        return prev + next;
+    }, 0)
+    return sum;
+  }
+  
 
     return (
         <div>
@@ -101,9 +101,10 @@ export const Cart = () => {
                         </TableRow>
                         </TableHead>
                         <TableBody>
-                        {fetchdataObj?.cart?.map((row) => {
                             
-                            sum += row.discount;
+                        {cart.map((row, index) => {
+                            
+                            // sum += (row.discount * row.count);
                             return (
                             <StyledTableRow className={style.table_Row} key={row._id}>
                             <StyledTableCell component="th" scope="row" className={style.product_img_holder}>
@@ -113,7 +114,7 @@ export const Cart = () => {
                                 <h3>{row.name}</h3>
                                 
                             </StyledTableCell>
-                            <StyledTableCell sx={{marginTop: 2}} align="right">Rs. {row.discount}</StyledTableCell>
+                            <StyledTableCell sx={{marginTop: 2}} align="right">Rs. {row.discount * row.count}</StyledTableCell>
                             <StyledTableCell align="right">
                             <Box
                             sx={{
@@ -131,20 +132,16 @@ export const Cart = () => {
                             <div>
                                 
                                 <ButtonGroup>
-                                <h3 style={{marginTop: "10px", marginRight:"20px"}}>{count}</h3>
+                                <h3 style={{marginTop: "10px", marginRight:"20px"}}>{row.count}</h3>
                                 <Button
                                     aria-label="reduce"
-                                    onClick={() => {
-                                    setCount(Math.max(count - 1, 0));
-                                    }}
+                                    onClick={() => {dispatch(setUpdateCart([row._id, row.count-1]))}}
                                 >
                                     <RemoveIcon fontSize="small" />
                                 </Button>
                                 <Button
                                     aria-label="increase"
-                                    onClick={() => {
-                                    setCount(count + 1);
-                                    }}
+                                    onClick={() => {dispatch(setUpdateCart([row._id, row.count+1]))}}
                                 >
                               
                                     <AddIcon fontSize="small" />
@@ -155,7 +152,7 @@ export const Cart = () => {
                             </Box>
                             </StyledTableCell>
                             <StyledTableCell align="right">
-                                <Button variant="contained" onClick={() => {handledelete(row._id)}}>Delete</Button>
+                                <Button variant="text" style={{borderRadius:"50%", width: "10px !imporatant", height:"35px !important"}} onClick={ () =>  dispatch(setDeleteCart(index))}><DeleteOutlinedIcon /></Button>
                             </StyledTableCell>
                             </StyledTableRow>
                             )
@@ -180,7 +177,10 @@ export const Cart = () => {
                 <div className={style.action_div1}>
                     <div>
                         <h1>Total  </h1>
-                        <h3>Rs. <span>{sum}</span></h3>
+                        <h3>Rs. <span>{
+                         getTotal()
+                    }
+                        </span></h3>
                     </div><br></br>
                     <div>
                       <Link to="/checkout"><Button variant="contained" className={style.checkout_btn}>Checkout</Button></Link>
@@ -193,7 +193,6 @@ export const Cart = () => {
         </div>
     )
 }
-
 
 
 

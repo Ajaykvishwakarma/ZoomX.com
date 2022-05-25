@@ -1,12 +1,12 @@
 
-import { ADD_CART} from './actiontype';
+import { ADD_CART, FETCH_CART_DATA, DELETE_CART, UPDATE_CART} from './actiontype';
 
-
+// const cartData = JSON.parse(localStorage.getItem('cartData')) || [];
 
 export const setCartData = (payload) =>({type: ADD_CART, payload})
-
-
-
+export const setData = (payload) =>({type: FETCH_CART_DATA, payload})
+export const setDeleteCart = (payload) => ({type : DELETE_CART, payload})
+export const setUpdateCart = (payload) => ({type : UPDATE_CART, payload})
 
 export const addCartData = (cartdata) => async (dispatch) => {
 
@@ -25,11 +25,10 @@ export const addCartData = (cartdata) => async (dispatch) => {
         })
         .then(res => res.json())
         .then(data => {
-        // enter you logic when the fetch is successful
-            // console.log(data)
+
         })
         .catch(error => {
-        // enter your logic for when there is an error (ex. error toast)
+        
         console.log(error)
         })  
 
@@ -39,35 +38,10 @@ export const addCartData = (cartdata) => async (dispatch) => {
     
 }
 
-// export const fetchCartData = (url) => async (dispatch) => {
+export const fetchCartData = (cartData) => async (dispatch) => {
 
-//     const token = JSON.parse(localStorage.getItem('token'))
-//     dispatch(setLoading(false))
-//     const a = await fetch(url, {
-//         method: "GET",
-//         headers : {
-//             Authorization : `Bearer ${token}`
-//         }
-//     })
-     
-//     const res = await a.json()
-//     const data = res
-//     dispatch(setLoading(true))
-//     dispatch(setCartData(data))
-    
-// }
+   
+    dispatch(setData(cartData))
 
-// export const deleteCartdata = (url) => async (dispatch) => {
+}
 
-//     const token = JSON.parse(localStorage.getItem('token'))
-//     const a = await fetch(url, {
-//         method: "DELETE",
-//         headers : {
-//             Authorization : `Bearer ${token}`
-//         }
-//     })
-//     const res = await a.json()
-//     const data = res
-//     dispatch(setLoading(true))
-//     dispatch(setDeletecart(data))
-// }
